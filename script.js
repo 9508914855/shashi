@@ -38,12 +38,10 @@ document.addEventListener("keydown", function(event) {
   }
 });
 
-<script>
-  function sharePageUrl() {
-    // Get the current page URL
-    var currentPageUrl = encodeURIComponent(window.location.href);
+function sharePageUrl() {
+  // Get the current page URL
+  var currentPageUrl = encodeURIComponent(window.location.href);
 
-    // Open WhatsApp with the current page URL
-    window.location.href = "whatsapp://send?text=" + currentPageUrl;
-  }
-</script>
+  // Open WhatsApp with the current page URL
+  window.location.href = "whatsapp://send?text=" + currentPageUrl;
+}
