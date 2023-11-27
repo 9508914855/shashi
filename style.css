@@ -308,10 +308,11 @@ h1::after {
   position: absolute;
   top: 0;
   right: 0;
-  background-color: rgba(252, 203, 6, 0.1);
-  border-radius: 50px;
+  background-color: none;
+  border-radius: 10%;
   color: #fccb06;
-  padding: 20px 15px;
+  padding: 10px 10px;
+  margin: 20px 15px;
   cursor: pointer;
   display: flex;
   align-items: center;
