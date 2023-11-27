@@ -37,3 +37,13 @@ document.addEventListener("keydown", function(event) {
     closePopup();
   }
 });
+
+<script>
+  function sharePageUrl() {
+    // Get the current page URL
+    var currentPageUrl = encodeURIComponent(window.location.href);
+
+    // Open WhatsApp with the current page URL
+    window.location.href = "whatsapp://send?text=" + currentPageUrl;
+  }
+</script>

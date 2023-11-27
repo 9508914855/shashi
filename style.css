@@ -304,3 +304,16 @@ h1::after {
   vertical-align: middle;
 }
 
+.share-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: none;
+  color: #fccb06;
+  padding: 20px 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
