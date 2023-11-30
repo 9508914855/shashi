@@ -1,47 +1,25 @@
-window.addEventListener("scroll", function() {
-  var header = document.getElementById("myHeader");
-  if (window.pageYOffset > 100) {
-    header.classList.add("show");
-  } else {
-    header.classList.remove("show");
-  }
-});
-
-var popupButton = document.getElementById("popupButton");
-var overlay = document.getElementById("overlay");
-var popupContainer = document.getElementById("popupContainer");
-
-popupButton.addEventListener("click", function() {
-  overlay.style.display = "block";
-  popupContainer.style.display = "block";
-});
-
-overlay.addEventListener("click", function() {
-  overlay.style.display = "none";
-  popupContainer.style.display = "none";
-});
-
-function openPopup() {
-  document.getElementById("overlay").style.display = "block";
-  document.getElementById("popupContainer").style.display = "block";
-}
-
-function closePopup() {
-  document.getElementById("overlay").style.display = "none";
-  document.getElementById("popupContainer").style.display = "none";
-  document.getElementById("iframePopup").src = ""; // Clear the iframe source
-}
-
-document.addEventListener("keydown", function(event) {
-  if (event.key === "Escape") {
-    closePopup();
-  }
-});
 
 function sharePageUrl() {
-  // Get the current page URL
-  var currentPageUrl = encodeURIComponent(window.location.href);
+    // Get the current page URL
+    var currentPageUrl = encodeURIComponent(window.location.href);
+  
+    // Open WhatsApp with the current page URL
+    window.location.href = "whatsapp://send?text=" + currentPageUrl;
+  }
 
-  // Open WhatsApp with the current page URL
-  window.location.href = "whatsapp://send?text=" + currentPageUrl;
-}
+
+  window.onscroll = function() { scrollFunction() };
+
+        function scrollFunction() {
+            var header = document.getElementById("hidden-header");
+
+            // Check screen width before applying scroll behavior
+            if (window.innerWidth < 400) {
+                // Add the 'active' class when the scroll position is 100px or more
+                if (document.body.scrollTop > 180 || document.documentElement.scrollTop > 180) {
+                    header.classList.add("active");
+                } else {
+                    header.classList.remove("active");
+                }
+            }
+        }
