@@ -18,7 +18,7 @@ self.addEventListener('install', (event) => {
     caches.open('Shashi-profile-cache').then((cache) => {
       return cache.addAll([
         '',
-        'index.html',
+        '../index.html',
         '../assets/app-icon.png'
       ]);
     })
